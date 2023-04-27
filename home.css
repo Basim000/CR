@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --accent: #6AABD2;
+    --light: #F2F3F7;
+    --dark: #141414;
+}
+
+body {
+    background: var(--dark);
+    color: var(--light);
+    font-family: 'Alegreya', serif;
+    font-size: 16px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    transition: 0.5s;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+header a {
+    color: var(--light);
+    text-decoration: none;
+    padding: 15px 20px;
+    font-size: 1.7rem;
+    transition: 0.5s ease-in-out;
+}
+
+header a:hover {
+    scale: 1.1;
+    color: var(--accent);
+}
+
+#header1 {
+    color: var(--accent);
+    scale: 1.2;
+    font-weight: bold;
+}
+
+#hero {
+    background-color: gray;
+    background-image: url(../CR/hero.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+    margin-top: -10vh;
+    text-align: center;
+}
+
+#hero-text {
+    padding: 25vh 0px;
+}
+
+#hero-text h1 {
+    font-size: 7rem;
+    padding-bottom: 60px;
+}
+
+button {
+    font-size: 1.5rem;
+    font-family:'Alegreya', serif;
+    font-weight: bold;
+    color: var(--light);
+    background-color: var(--accent);
+    padding: 12px 12px;
+    border: none;
+    border-radius: 12px;
+    transition: 0.5s ease-in-out;
+}
+
+#hero button:hover, #hero button:focus {
+    scale: 1.1;
+    color: var(--accent);
+    background-color: var(--light);
+}
+
+span {
+    color: var(--accent);
+}
+
+#aboutus {
+    height: 85vh;
+    padding-top: 15vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 25px;
+}
+
+#aboutus p {
+    font-size: 1.3rem;
+}
+
+#aboutus img {
+    height: 75vh;
+    width: 40%;
+    clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
