@@ -8,13 +8,23 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <title>Compass Rose - Home</title>
+    <style>
+        .highlight {
+            scale: 1.2;
+            font-weight: bold;
+            color: var(--accent);
+            transition: 0.2;
+        }
+      </style>
 </head>
 <body>
     <header>
-        <a id="header1" href="#hero">Compass Rose</a>
-        <a id="header2" href="#aboutus">about us</a>
-        <a id="header3" href="#products">products</a>
-        <a id="header4" href="#contactus">contact us</a>
+        <nav>
+            <a id="header1" href="#hero">Compass Rose</a>
+            <a id="header2" href="#aboutus">about us</a>
+            <a id="header3" href="#products">products</a>
+            <a id="header4" href="#contactus">contact us</a>
+        </nav>
     </header>
     <div id="hero">
         <div id="hero-text">
@@ -66,4 +76,45 @@
        </div>
     </div>
 </body>
+<script>
+    document.addEventListener('scroll', () => {
+        const header = document.querySelector('header');
+
+        if (((window.scrollY > 0) && (window.scrollY < 1500)))  {
+            header.classList.add('scrolled')
+        } else  if (window.scrollY > 1620) {
+            header.classList.add('scrolled')
+        } else {
+            header.classList.remove('scrolled')
+        }
+    })
+</script>
+<script>
+    window.addEventListener('scroll', function() {
+
+      const scrollPosition = window.scrollY;
+
+      const headerHeight = document.querySelector('header').offsetHeight;
+
+      const sectionPositions = [
+        document.querySelector('#aboutus').offsetTop,
+        document.querySelector('#products').offsetTop,
+        document.querySelector('#contactus').offsetTop,
+      ];
+
+      let currentSectionIndex = 0;
+      for (let i = 0; i < sectionPositions.length; i++) {
+        if (scrollPosition >= sectionPositions[i] - headerHeight) {
+          currentSectionIndex = i + 1;
+        }
+      }
+
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.classList.remove('highlight');
+      });
+
+      navLinks[currentSectionIndex].classList.add('highlight');
+    });
+  </script>
 </html>
