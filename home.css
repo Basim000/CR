@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -124,6 +125,7 @@ header a:hover {
 
 .blue {
     color: var(--accent);
+    font-weight: bold;
 }
 
 .white {
@@ -132,25 +134,25 @@ header a:hover {
 
 #aboutus {
     min-height: 65vh;
-    padding-top: 15vh;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-top: 20vh;
+    padding-left: 25px;
+    padding-right: 25px;
     padding-bottom: 20vh;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap-reverse;
     align-items: center;
-    justify-content: center;
-    gap: 25px;
+    justify-content: space-evenly;
+    gap: 50px;
 }
 
 #aboutus p {
-    font-size: 1.3rem;
-    max-width: 50%;
+    font-size: 1.4rem;
+    max-width: 500px;
 }
 
 #aboutus img {
     height: 60vh;
-    width: 40%;
+    max-width: 100%;
     clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
 
@@ -228,8 +230,10 @@ header a:hover {
 .enquiry {
     display: flex;
     flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
     height: 60vh;
-    width: 40%;
+    min-width: 330px;
     border: var(--accent) 2px solid;
 }
 
@@ -241,20 +245,20 @@ header a:hover {
 }
 
 form {
-    padding: 15px 30px;
+    padding: 15px 15px;
 }
 
 .contactinfo {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column wrap;
     justify-content: space-evenly;
     height: 60vh;
-    width: 40%;
+    min-width: 330px;
     border: var(--accent) 2px dashed;
 }
 
 .contactinfo h2 {
-    padding: 30px 30px;
+    padding: 15px 15px;
     font-weight: normal;
     font-family: 'Alegreya', serif;
     font-size: 1.7rem;
@@ -274,7 +278,7 @@ label {
 
 input[type=text] {
     width: 100%;
-    padding: 15px;
+    padding: 15px 0px;
     margin: 5px 0 22px 0;
     display: block;
     border: none;
@@ -285,7 +289,7 @@ input[type=text] {
 
 textarea {
     width: 100%;
-    padding: 15px;
+    padding: 15px 0px;
     margin: 5px 0 22px 0;
     display: block;
     border: none;
@@ -297,13 +301,13 @@ textarea {
 button {
     background-color: var(--accent);
     color: var(--light);
+    display: block;
     font-size: 1.2rem;
     padding: 15px 20px;
-    margin: 8px 0;
+    margin: 8px auto;
     border: none;
     cursor: pointer;
-    width: 40%;
-    align-self: center;
+    width: fit-content;
     transition: 0.5s ease-in-out;
   }
 
@@ -312,8 +316,13 @@ button {
     color: var(--accent);
   }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 800px) {
     #hero h1 {font-size: 6rem; font-weight: normal; padding: 15vh 0;}  
     #nomobile {display: none;}
+    #aboutus p {font-size: 1.2rem; text-align: center;}
+    #aboutus img {height: auto; clip-path: none;}
+    #aboutus {padding-bottom: 10vh; padding-top: 10vh;}
+    #products {padding-bottom: 10vh; padding-top: 10vh;}
+    #contactus {padding-top: 10vh; font-size: 1.2rem;}
 }
 
