@@ -1,7 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     scroll-behavior: smooth;
 }
 
@@ -19,44 +18,76 @@ body {
     font-size: 16px;
 }
 
-header {
+.topnav {
     position: sticky;
     top: 0;
     left: 0;
-    width: 100%;
     height: 10.5vh;
-    transition: 0.3s ease-in-out;
+    padding: 0px 15px;
+    overflow: hidden;
+    transition: 0.5s ease-in-out;
     text-align: center;
-    flex-flow: row nowrap;
-    align-items: start;
     z-index: 1;
 }
 
+.topnav .icon {
+    display: none;
+}
 
-header.scrolled {
+@media screen and (max-width: 800px) {
+    .topnav a:not(:first-child) {
+        display: none;
+    } 
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+   .topnav.responsive {position: sticky; height: auto; background-color: var(--dark);}
+    .topnav.responsive a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: var(--accent);   
+    }
+    
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .topnav {display: flex; justify-content: space-around;}
+}
+
+.topnav.scrolled {
     background-color: var(--dark);
-    transition: 0.5s ease-in-out;
 }
 
-.highlight {
-    scale: 1.2;
-    font-weight: bold;
-    color: var(--accent);
-}
-
-header a {
+.topnav a {
+    float: left;
+    display: block;
     color: var(--light);
     text-decoration: none;
-    padding: 20px 20px;
-    font-size: 1.7rem;
+    text-align: center;
+    padding: 15px 15px;
+    font-size: 1.8rem;
     transition: 0.5s ease-in-out;
 }
 
-header a:hover {
+ .topnav a:hover {
     scale: 1.2;
     font-weight: bold;
     color: var(--accent);
 }
+
+.topnav a.highlight {
+    scale: 1.2;
+    font-weight: bold;
+    color: var(--accent);
+}
+
 
 #hero {
     background-color: var(--mid);

@@ -7,24 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../CR/home.js"></script>
     <title>Compass Rose - Home</title>
-    <style>
-        .highlight {
-            scale: 1.2;
-            font-weight: bold;
-            color: var(--accent);
-            transition: 0.2;
-        }
-      </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <a id="header1" href="#hero">Compass Rose</a>
-            <a id="header2" href="#aboutus">about us</a>
-            <a id="header3" href="#products">products</a>
-            <a id="header4" href="#contactus">contact us</a>
-        </nav>
+    <header class="topnav" id="myTopnav">
+            <a id="header1" href="#hero" onclick="autoClose()">Compass Rose</a>
+            <a id="header2" href="#aboutus" onclick="autoClose()">about us</a>
+            <a id="header3" href="#products" onclick="autoClose()">products</a>
+            <a id="header4" href="#contactus" onclick="autoClose()">contact us</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
     </header>
     <div class="section" id="hero">
         <div id="hero-text">
@@ -73,45 +66,4 @@
        </div>
     </div>
 </body>
-<script>
-    document.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-
-        if (((window.scrollY > 0) && (window.scrollY < 1500)))  {
-            header.classList.add('scrolled')
-        } else  if (window.scrollY > 1620) {
-            header.classList.add('scrolled')
-        } else {
-            header.classList.remove('scrolled')
-        }
-    })
-</script>
-<script>
-    window.addEventListener('scroll', function() {
-
-      const scrollPosition = window.scrollY;
-
-      const headerHeight = document.querySelector('header').offsetHeight;
-
-      const sectionPositions = [
-        document.querySelector('#aboutus').offsetTop,
-        document.querySelector('#products').offsetTop,
-        document.querySelector('#contactus').offsetTop,
-      ];
-
-      let currentSectionIndex = 0;
-      for (let i = 0; i < sectionPositions.length; i++) {
-        if (scrollPosition >= sectionPositions[i] - headerHeight) {
-          currentSectionIndex = i + 1;
-        }
-      }
-
-      const navLinks = document.querySelectorAll('nav a');
-      navLinks.forEach(link => {
-        link.classList.remove('highlight');
-      });
-
-      navLinks[currentSectionIndex].classList.add('highlight');
-    });
-  </script>
 </html>
