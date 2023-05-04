@@ -13,7 +13,7 @@ function autoClose() {
 }
 
 document.addEventListener('click', () => {
-  const remove = document.querySelector(".topnav.responsive a.icon");
+  const remove = querySelector(".topnav a.icon");
     remove.classList.remove("responsive");
 })
 
