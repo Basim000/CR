@@ -19,11 +19,25 @@
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="navbar">
             <a id="header1" href="#hero">Compass Rose</a>
-            <a id="header2" href="#aboutus">about us</a>
-            <a id="header3" href="#products">products</a>
-            <a id="header4" href="#contactus">contact us</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a class="navlink" id="header2" href="#aboutus">about us</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="navlink" id="header3" href="#products">products</a> 
+                </li>
+                <li class="nav-item">
+                    <a class="navlink" id="header4" href="#contactus">contact us</a> 
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+
         </nav>
     </header>
     <div class="section" id="hero">
@@ -72,46 +86,6 @@
         <h2><span>address:</span> compass rose ge, male' magu</h2>
        </div>
     </div>
+    <script src="./home.js"></script>
 </body>
-<script>
-    document.addEventListener('scroll', () => {
-        const header = document.querySelector('header');
-
-        if (((window.scrollY > 0) && (window.scrollY < 1500)))  {
-            header.classList.add('scrolled')
-        } else  if (window.scrollY > 1620) {
-            header.classList.add('scrolled')
-        } else {
-            header.classList.remove('scrolled')
-        }
-    })
-</script>
-<script>
-    window.addEventListener('scroll', function() {
-
-      const scrollPosition = window.scrollY;
-
-      const headerHeight = document.querySelector('header').offsetHeight;
-
-      const sectionPositions = [
-        document.querySelector('#aboutus').offsetTop,
-        document.querySelector('#products').offsetTop,
-        document.querySelector('#contactus').offsetTop,
-      ];
-
-      let currentSectionIndex = 0;
-      for (let i = 0; i < sectionPositions.length; i++) {
-        if (scrollPosition >= sectionPositions[i] - headerHeight) {
-          currentSectionIndex = i + 1;
-        }
-      }
-
-      const navLinks = document.querySelectorAll('nav a');
-      navLinks.forEach(link => {
-        link.classList.remove('highlight');
-      });
-
-      navLinks[currentSectionIndex].classList.add('highlight');
-    });
-  </script>
 </html>
