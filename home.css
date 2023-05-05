@@ -359,6 +359,7 @@ button {
 
 @media screen and (max-width: 800px) {
     body {font-size: 14px}
+    #hero h1 {font-size: 5rem}
     #nomobile {display: none;}
     #aboutus p {text-align: center;}
     #aboutus img {height: auto; clip-path: none;}
@@ -369,4 +370,6 @@ button {
 
 @media screen and (max-width: 400px) {
 	body {font-size: 10px}
+	#hero h1 {font-size: 3rem}
+	#contactus {padding-top: 10vh; font-size: 1rem}
 }
