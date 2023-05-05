@@ -364,9 +364,9 @@ button {
     #aboutus img {height: auto; clip-path: none;}
     #aboutus {padding-bottom: 10vh; padding-top: 10vh;}
     #products {padding-bottom: 10vh; padding-top: 10vh;}
-    #contactus {padding-top: 10vh;}
+    #contactus {padding-top: 10vh; font-size: 1.2rem}
 }
 
 @media screen and (max-width: 400px) {
-	body {font-size: 12px}
+	body {font-size: 10px}
 }
