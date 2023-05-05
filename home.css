@@ -358,11 +358,15 @@ button {
 
 
 @media screen and (max-width: 800px) {
-    #hero h1 {font-size: 6rem; font-weight: normal; padding: 15vh 0;}  
+    body {font-size: 14px}
     #nomobile {display: none;}
-    #aboutus p {font-size: 1.2rem; text-align: center;}
+    #aboutus p {text-align: center;}
     #aboutus img {height: auto; clip-path: none;}
     #aboutus {padding-bottom: 10vh; padding-top: 10vh;}
     #products {padding-bottom: 10vh; padding-top: 10vh;}
-    #contactus {padding-top: 10vh; font-size: 1.2rem;}
+    #contactus {padding-top: 10vh;}
+}
+
+@media screen and (max-width: 400px) {
+	body {font-size: 12px}
 }
