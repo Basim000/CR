@@ -1,8 +1,1 @@
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav" || "topnav.scrolled") {
-        x.className += ' responsive'; 
-    } else {
-        x.className = "topnav" || "topnav.scrolled";
-    }
-}document.addEventListener("click",(()=>{querySelector(".topnav a.icon").classList.remove("responsive")})),document.addEventListener("scroll",(()=>{const e=document.querySelector(".topnav");window.scrollY>0?e.classList.add("scrolled"):e.classList.remove("scrolled")})),window.addEventListener("scroll",(function(){const e=window.scrollY,o=document.querySelector("header").offsetHeight,t=[document.querySelector("#aboutus").offsetTop,document.querySelector("#products").offsetTop,document.querySelector("#contactus").offsetTop];let c=0;for(let s=0;s<t.length;s++)e>=t[s]-o&&(c=s+1);const s=document.querySelectorAll(".topnav a");s.forEach((e=>{e.classList.remove("highlight")})),s[c].classList.add("highlight")}));
+function myFunction(){var e=document.getElementById("myTopnav");e.className,e.className+=" responsive"}function autoClose(){document.getElementById("myTopnav").classList.remove("responsive")}document.addEventListener("click",()=>{let e=querySelector(".topnav a.icon");e.classList.remove("responsive")}),document.addEventListener("scroll",()=>{let e=document.querySelector(".topnav");window.scrollY>0?e.classList.add("scrolled"):e.classList.remove("scrolled")}),window.addEventListener("scroll",function(){let e=window.scrollY,t=document.querySelector("header").offsetHeight,s=[document.querySelector("#aboutus").offsetTop,document.querySelector("#products").offsetTop,document.querySelector("#contactus").offsetTop,],o=0;for(let l=0;l<s.length;l++)e>=s[l]-t&&(o=l+1);let r=document.querySelectorAll(".topnav a");r.forEach(e=>{e.classList.remove("highlight")}),r[o].classList.add("highlight")});
