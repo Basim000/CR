@@ -371,6 +371,6 @@ button {
 
 @media screen and (max-width: 400px) {
 	body {font-size: 10px}
-	#hero h1 {font-size: 3.5rem; overflow: wrap}
+	#hero h1 {overflow: wrap}
 	#contactinfo h2 {font-size: 0.8rem}
 }
